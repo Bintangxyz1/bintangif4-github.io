@@ -1,0 +1,114 @@
+<html>
+<style>
+    body {
+       background-image: url("wlpp.jpg");
+       background-position: center;
+       background-size: cover;
+   }
+</style>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+
+<div class="w3-container">
+    <img src="bintang.jpg" style="width: 100%;">
+</div>
+
+<div class="w3-bar w3-black w3-card-4">
+    <button class="w3-bar-item w3-button" onclick="openKota('about')">ABOUT ME</button>
+    <button class="w3-bar-item w3-button" onclick="openKota('Supra')">SUPRA</button>
+    <button class="w3-bar-item w3-button" onclick="openKota('Gtr')">GTR R35</button>
+    <button class="w3-bar-item w3-button" onclick="openKota('Civic')">CIVIC TYPE R</button>
+
+        <div class="w3-dropdown-hover">
+            <button class="w3-button">MORE</button>
+            <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                <button class="w3-bar-item w3-button" onclick="openKota('Brio')">BRIO</button>
+                <button class="w3-bar-item w3-button" onclick="openKota('Bmw')">BMW MK4</button>
+                <button class="w3-bar-item w3-button" onclick="openKota('Porsche')">PORSCHE 911</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="about" class="w3-container kota w3-animate-zoom w3-card-4 w3-light-gray" style="display:none; opacity: 70%;">
+        <center>
+            <h1 ><b>ABOUT ME</h1>
+        <p>NAMA     <tr>: Bintang Kurnia Saputra
+        <p>NIM      <tr>: 10123161
+        <p>KELAS    <tr>: IF-4
+        </center>
+    </div>
+    <div id="Supra" class="w3-container kota w3-animate-zoom w3-card-4 w3-light-gray" style="display:none; opacity: 70%;">
+        <center>
+            <h1 ><b>SUPRA</h1>
+        <img src="mobil.jpg" style="width: 25%;">
+        </center>
+        <p>Toyota Supra adalah mobil sport berperforma tinggi yang diproduksi oleh Toyota Motor Corporation, Jepang dari tahun 1978
+        sampai 2002. Pada mulanya, Supra adalah versi mewah bermesin 6 silinder dari Toyota Celica. Mulai tahun 1986, Supra menjadi
+        mobil sport tersendiri yang tidak ada hubungannya dengan Celica.
+    </div>
+
+    <div id="Gtr" class="w3-container kota w3-animate-right w3-card-4 w3-light-gray" style="display:none; opacity: 70%;">
+        <center>
+            <h1 ><b>GTR R35</h1>
+        <img src="gtr35.jpg" style="width: 25%;">
+        </center>
+        <P>Nissan GT-R adalah sebuah mobil sport yang dibuat oleh Nissan, dikeluarkan di Jepang pada tanggal 6 Desember 2007,
+        Amerika Serikat pada tanggal 7 Juli 2008, dan seluruh dunia pada bulan Maret 2009.[1][2][3] Mobil ini merupakan 
+        penerus dari jajaran Skyline GT-R.
+        
+    </div>
+
+    <div id="Civic" class="w3-container kota w3-animate-left w3-card-4 w3-light-gray" style="display:none; opacity: 70%;">
+        <center>
+            <h1 ><b>CIVIC TYPE R</h1>
+        <img src="civic.jpg" style="width: 25%;">
+        </center>
+        <P>The first Civic Type R was the third model to receive Honda's Type R badge (after the NSX and Integra). 
+        Type R versions of the Civic typically feature a lightened and stiffened body, specially tuned engine, and 
+        upgraded brakes and chassis, and are offered only in five- or six-speed manual transmission. Like other Type R models,
+        red is used in the background of the Honda badge to distinguish it from other models.
+    </div>
+
+    <div id="Brio" class="w3-container kota w3-animate-top w3-card-4 w3-light-gray" style="display:none; opacity: 70%;">
+        <center>
+            <h1 ><b>BRIO</h1>
+        <img src="brio.jpg" style="width: 25%;">
+        </center>   
+        <P>Honda Brio adalah mobil berjenis hatchback subkompak 5 pintu yang diproduksi oleh Honda di Indonesia dan Thailand.
+            Mobil ini diperkenalkan pada bulan Maret 2011.
+            Nama Brio diambil dari bahasa Italia yang artinya ceria dan bersemangat. 
+    </div>
+
+    <div id="Bmw" class="w3-container kota w3-card-4 w3-animate-zoom w3-light-gray" style="display:none; opacity: 70%;">
+        <center>
+            <h1 ><b>BMW MK4</h1>
+        <img src="mk4.jpg" style="width: 25%;">
+        </center>
+        <P>The BMW 4 Series is a range of compact executive cars manufactured by BMW since 2013. The 4 Series was created when 
+        BMW spun off the 2-door models (coupé and convertible) of the 3 Series into a separate series. The 4 Series is currently in its second generation.
+    </div>
+
+    <div id="Porsche" class="w3-container kota w3-animate-bottom w3-card-4 w3-light-gray" style="display:none; opacity: 70%;">
+        <center>
+            <h1 ><b>PORSCHE 911</h1>
+            <img src="porsche.jpg" style="width: 25%;">
+        </center>
+        <P>The Porsche 911 (pronounced Nine Eleven or in German: Neunelf) is a two-door 2+2 high performance rear-engined sports car introduced in September 1964 
+        by Porsche AG of Stuttgart, Germany. It has a rear-mounted flat-six engine and originally a torsion bar suspension. The car has been continuously enhanced 
+        through the years but the basic concept has remained unchanged.[1] The engines were air-cooled until the introduction of the 996 series in 1998.
+        
+    </div>    
+
+<script>
+    function openKota(namakota) {
+    var i;
+    var x = document.getElementsByClassName("kota");
+    for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+    }
+    document.getElementById(namakota).style.display = "block";
+    }
+    </script>
+</html>
